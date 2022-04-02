@@ -5,7 +5,7 @@ const Stream = (props) => {
 
     return (
 
-        <h1>Stream component is being rendered.</h1> 
+        <h1 class="text-sky-400">Stream component is being rendered.</h1> 
         
     )
 

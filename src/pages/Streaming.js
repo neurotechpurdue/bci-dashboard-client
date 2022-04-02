@@ -16,6 +16,8 @@ const [buttonText, setButtonText] = useState("Start datastream")
 
 const [component, setComponent] = useState(<Stream/>)
 
+const [data, setData] = useState('stream 1');
+
 function handleClick() {
  if(stream == false){
    setStream(true);
@@ -32,7 +34,7 @@ function handleClick() {
     }
 
     function handleTrain() {
-        setComponent(<Train/>)
+        setComponent(<Train data={data} name="adi" component={<Test/>}/>)
     }
 
     function handleTest() {
@@ -53,6 +55,7 @@ function handleClick() {
         <Test/> */}
         { (stream ? <p> Data stream in progress...</p> : <p> Data stream stopped</p>)}
         <p>{click}</p>
+        <p class="text-orange-700"> HELLO?</p>
         </>
     )
 

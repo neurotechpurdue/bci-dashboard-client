@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react';
+import { Line, Chart } from 'react-chartjs-2';
+import 'chartjs-adapter-luxon';
+import StreamingPlugin from 'chartjs-plugin-streaming';
 
+Chart.register(StreamingPlugin);
 
 
 // class 
 const Main = (props) => { 
+ 
 
-    return (
-        <h1>Main</h1> 
-
+    return ( <Line
+      data={{
+        datasets: [{
+          data: []
+        }, {
+          data: []
+        }]
+      }}
+      options={{
+        scales: {
+          x: {
+            type: 'realtime'
+          }
+        }
+      }}
+    />
     )
 
 }

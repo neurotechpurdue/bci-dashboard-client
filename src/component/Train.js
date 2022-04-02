@@ -4,9 +4,11 @@ import React from 'react'
 const Train = (props) => { 
 
     return (
-
-        <h1>Train component is being rendered.</h1> 
-        
+        <>
+        <h1>Data stream was: {props.data} </h1> 
+        <h1> my name is : {props.name}</h1>
+        {props.component}
+        </>
     )
 
 }
