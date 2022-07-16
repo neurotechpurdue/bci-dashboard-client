@@ -1,32 +1,23 @@
-import React, { Component } from 'react';
-import { Line, Chart } from 'react-chartjs-2';
-import 'chartjs-adapter-luxon';
-import StreamingPlugin from 'chartjs-plugin-streaming';
+import React, { useState } from "react";
+import Game from "../Components/Game/Game";
+import List from "../Components/List";
+const axios = require("axios");
 
-Chart.register(StreamingPlugin);
+// class
+const Main = (props) => {
+  const [running, setRunning] = useState(false);
 
+  const handleButton = () => {
+    setRunning(!running);
+    axios.post("/run").then();
+  };
 
-// class 
-const Main = (props) => { 
- 
-
-    return ( <Line
-      data={{
-        datasets: [{
-          data: []
-        }, {
-          data: []
-        }]
-      }}
-      options={{
-        scales: {
-          x: {
-            type: 'realtime'
-          }
-        }
-      }}
-    />
-    )
-
-}
-export default Main 
+  return (
+    <>
+      <h1>Main</h1>
+      <button onClick={handleButton}>{!running ? "Start" : "Stop"}</button>
+      <List></List>
+    </>
+  );
+};
+export default Main;

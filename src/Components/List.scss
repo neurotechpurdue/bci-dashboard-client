@@ -1,0 +1,15 @@
+.list-item {
+  p {
+    padding: 0px 15px;
+  }
+}
+
+.header {
+  p {
+    padding: 0 10px;
+    color: white;
+  }
+  background-color: slateblue;
+  display: flex;
+  flex-direction: row;
+}

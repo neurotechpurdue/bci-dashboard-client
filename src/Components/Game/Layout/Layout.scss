@@ -1,0 +1,10 @@
+@mixin button {
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+}
+button {
+  @include button;
+}
